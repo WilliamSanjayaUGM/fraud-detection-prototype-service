@@ -2,15 +2,13 @@ package com.learn.fraud_detection.command;
 
 import java.util.concurrent.CompletableFuture;
 
-import org.springframework.stereotype.Component;
-
 import com.learn.fraud_detection.model.FraudCheckResult;
 import com.learn.fraud_detection.model.TransactionContext;
 import com.learn.fraud_detection.service.AMLApiService;
 
 import lombok.RequiredArgsConstructor;
 
-@Component
+// No Need to put the @Component annotation so there won't be duplicate bean. Let the instantiation will be done through the decorator config
 @RequiredArgsConstructor
 public class AMLCheckCommand implements FraudCommand{
 	
